@@ -30,15 +30,15 @@ Developed during the **Microsoft AI Innovators Summer Internship**, this project
 ## 📸 Application Screenshots
 
 ### 1. Home Page
-`/static/photos/home.png`
+![Ana Sayfa](static/photos/home.png)
 
 ### 2. Interactive Semantic Query Interface
 > *Users can type natural language questions or keywords to query the internal knowledge base instantly.*
-`static/photos/answer.png`
+![Çıktı Sayfası](static/photos/answer.png)
 
 ### 3. Full-Document PDF Export
 > *Generates a structured, beautifully formatted PDF report containing the entire FAQ knowledge repository.*
-`/static/photos/output.png`
+![PDF İndirme](static/photos/output.png)
 
 ---
 
