@@ -42,6 +42,10 @@ Developed during the **Microsoft AI Innovators Summer Internship**, this project
 
 ---
 
+## Video Link
+[INTERN FAQ VİDEO](https://youtu.be/WisG0ZgUh_w)
+
+---
 ## 🛠️ Tech Stack
 
 *   **Backend**: Python, FastAPI, Uvicorn
