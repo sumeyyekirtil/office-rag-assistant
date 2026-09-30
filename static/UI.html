@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofis ve Staj SSS Asistanı *INTERN FAQ*| Çevrimdışı Anlamsal RAG Projesi</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- html2pdf Kütüphanesi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/index.js">
+</head>
+
+<body>
+
+    <!-- Üst Bilgi Alanı (Hero) -->
+    <header class="hero-section text-center mb-4 mt-4">
+        <div class="container">
+            <h1 class="h2 accordion-collapse fw-bold mb-2"><i class="fas fa-brain me-2"></i>Ofis ve Staj SSS Asistanı (INTERN FAQ)</h1>
+            <p class="h3 lead mb-3 text-dark">Uzun ve karmaşık sorularınız veritabanı dosyasından anlamsal olarak taranır.</p>
+            <!-- SSS Veri Setini PDF Olarak İndirme Butonu -->
+            <button id="downloadBtn" class="btn btn-light text-danger fw-bold shadow-sm px-3 py-2">
+                <i class="fas fa-file-pdf me-2"></i> SSS Sorularını PDF Olarak İndir
+            </button>
+        </div>
+    </header>
+
+    <!-- Ana İçerik Konteyneri -->
+    <main class="container mb-8 mt-5">
+        <div class="row justify-content-center">
+            <!-- Soru Sorma Paneli (Textbox ve Gönder Alanı) -->
+            <div class="col-lg-8">
+                <div class="card p-4">
+                    <h3 class="h4 fw-bold mb-3 text-danger"><i class="fas fa-comments me-2"></i>INTERN FAQ Sorularınızı Cevaplamak İçin Hazır ^*^</h3>
+                    <div class="mb-3">
+                        <label for="userQuestion" class="form-label text-muted small">Kurum içi yönergeler, staj kuralları veya staj şekilleri hakkında merak ettiklerinizi yazın:</label>
+                        <div class="input-group">
+                            <input type="text" id="userQuestion" class="form-control form-control-lg" placeholder="Örn: Staj defterinin geç teslim edilmesi durumunda ne olur?">
+                            <button id="askBtn" class="btn btn-success px-4">
+                                <i class="fas fa-paper-plane me-1"></i> Sor
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Yanıt Alanı (Başlangıçta Gizli) -->
+                    <div id="chatResponseArea" class="chat-history mt-3 d-none">
+                        <p class="h5 mb-1 text-muted small"><i class="fas fa-robot me-1"><strong>Asistan Yanıtı (Anlamsal Eşleşme):</strong></i></p>
+                        <hr class="my-1">
+                        <p id="responseText" class="mb-0 text-dark"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proje Amacı ve Gizlilik -->
+        <div class="row mt-6 mt-5">
+            <div class="col-md-6 mt-4">
+                <div class="card h-100 p-2">
+                    <div class="card-body">
+                        <h5 class="h4 fw-bold mb-2 text-danger"><i class="fas fa-shield-alt me-2"></i>Proje Hedefi ve Kapsamı</h5>
+                        <p class="text-muted small mb-2">Stajyerlerin kılavuzlara ve sık sorulan sorulara internetsiz ortamda güvenle ulaşması için geliştirildi.</p>
+                        <ul class="list-unstyled text-muted small mb-0">
+                            <li><i class="h4 fas fa-check text-success me-1"></i> %100 Çevrimdışı (Offline) Çalışma</li>
+                            <li><i class="h4 fas fa-check text-success me-1"></i> Qdrant Vektör Tabanlı Semantik Arama</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kullanılan Teknolojiler -->
+            <div class="col-md-6 mt-4">
+                <div class="card h-100 p-2">
+                    <div class="card-body">
+                        <h5 class="h4 fw-bold mb-2 text-danger"><i class="fas fa-microchip me-2"></i>Kullanılan Teknolojiler</h5>
+                        <div class="d-flex flex-wrap gap-4 mt-2">
+                            <span class="badge bg-primary">Foundry Local SDK</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                            <span class="badge bg-primary">Qdrant</span>
+                            <span class="badge bg-primary">Bootstrap 5</span>
+                            <span class="badge bg-primary">Python FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Alt Bilgi (Footer) -->
+    <footer class="text-center ">
+        <div class="container text-background-danger mt-5">
+            <p class="mb-1">© Intern FAQ. Tüm hakları saklıdır.</p>
+            <medium>&bull; Microsoft AI Innovators Internship Project (2026)</medium>
+        </div>
+    </footer>
+
+    <!-- FAQ.md dosyasından verileri çekmede kullanılan js komutları -->
+    <!-- Bootstrap JS ve Tarayıcı Etkileşim Scriptleri -->
+    <script src="/static/index.js"></script>
+</body>
+
+</html>
